@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: newtest:test
+    ports:
+      - "8080:80"
+    networks:
+      - testnet2
+    deploy:
+      replicas: 3
+      placement:
+        constraints: [node.role == worker]
+networks:
+  testnet2:
+    driver: overlay
+    attachable: true
