@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   nginx:
-    image: newtest:test
+    image: 211.183.3.200:5000/newtest:test
     ports:
       - "8080:80"
     networks:
